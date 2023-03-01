@@ -1,0 +1,912 @@
+:root {
+  --primary-accent-color: #404bbf;
+  --secondary-accent-color: #ffffff;
+  --primary-background-color: #2e2f42;
+  --secondary-background-color: #f4f4fd;
+  --other-background-color: #ffffff;
+  --overlay-background-color: #4d5ae5;
+  --overlay-text-color: #f4f4fd;
+  --primary-text-color: #2e2f42;
+  --secondary-text-color: #434455;
+  --other-text-color: #e7e9fc;
+  --hero-text-color: #ffffff;
+  --border-color: #e7e9fc;
+  --other-border-color: rgba(0, 0, 0, 0.1);
+  --button-color: #4d5ae5;
+  --button-color-text: #4d5ae5;
+  --other-button-color-text: #ffffff;
+  --footer-primary-logo-color: #f4f4fd;
+  --footer-secondary-logo-color: #4d5ae5;
+  --header-primary-logo-color: #2e2f42;
+  --header-secondary-logo-color: #4d5ae5;
+  --icon-accent-background-color: #404bbf;
+  --icon-background-color: #4d5ae5;
+  --icon-company-background-color: #afb1b8;
+  --icon-accent-company-background-color: #404bbf;
+  --icon-border-color: #8e8f99;
+  --icon-color: #f4f4fd;
+  --other-icon-color: #000000;
+  --footer-text-color: #ffffff;
+  --footer-icon-color: #ffffff;
+  --footer-social-list-link-color: rgba(255, 255, 255, 0.1);
+  --footer-accent-social-list-link-color: #31d0aa;
+  --modal-window-background-color: #fcfcfc;
+  --modal-button-background-color: #e7e9fc;
+  --modal-button-icon-accent-color: #ffffff;
+  --backdrop-color: rgba(46, 47, 66, 0.4);
+  --modal-form-border-color: rgba(33, 33, 33, 0.2);
+  --modal-form-input-desc-color: #8e8f99;
+  --modal-form-input-text-color: #000000;
+  --modal-form-desc-color: #2e2f42;
+  --accent-modal-form-border-color: #4d5ae5;
+  --accent-icon-color: #4d5ae5;
+  --checkbox-border-color: #2e2f42;
+  --accent-checkbox-color: #404bbf;
+  --link-text-color: #4d5ae5;
+  --placeholder-footer-text-color: rgba(255, 255, 255, 0.6);
+  --footer-form-input-border-color: rgba(255, 255, 255, 0.3);
+  --placeholder-text-color: rgba(117, 117, 117, 0.5);
+  --transition-duration-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========СБРОС=СТИЛЕЙ======== */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =======СБРОС=СТИЛЕЙ=END======= */
+
+.list {
+  /* убирает точки для списков */
+  list-style: none;
+  display: flex;
+  /* надо ли align-items: center???? */
+  align-items: center;
+}
+
+.link {
+  /* убирает подчеркивание ссылок */
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: none;
+}
+
+.header-none {
+  /* скрывает заголовки */
+  position: fixed;
+  transform: scale(0);
+}
+
+body {
+  /* общий стиль */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* ==========HEADER========== */
+.header {
+  background: var(--other-background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-header-container {
+  display: flex;
+  /* надо ли align-items: center???? */
+  align-items: center;
+  justify-content: space-between;
+  /* или же можно использовать margin-left: auto; */
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+  /* надо ли align-items: center???? */
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--header-primary-logo-color);
+  margin-right: 76px;
+}
+
+.logo > span {
+  color: var(--header-secondary-logo-color);
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu-link {
+  font-weight: 500;
+  color: inherit;
+  transition: color var(--transition-duration-and-func);
+}
+
+.there-is {
+  color: var(--primary-accent-color);
+}
+
+.menu-link.there-is::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top: 20px;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background-color: var(--primary-accent-color);
+  border-radius: 2px;
+  margin-top: 24px;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--primary-accent-color);
+  transition: visibility var(--transition-duration-and-func);
+}
+
+.adress {
+  font-style: normal;
+}
+
+.list-adress {
+  display: flex;
+}
+
+.adress-contact {
+  color: var(--secondary-text-color);
+  transition: color var(--transition-duration-and-func);
+}
+
+.adress-contact:hover,
+.adress-contact:focus {
+  color: var(--primary-accent-color);
+}
+
+.contact-list:not(:first-child) {
+  margin-left: 40px;
+  margin-right: 0;
+}
+
+/* ==========HEADER=END========== */
+
+/* ==========MAIN========== */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-hero {
+  /* для скции hero */
+  padding-top: 188px;
+  padding-bottom: 188px;
+  background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/background/people-office.jpg);
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-feature {
+  padding-bottom: 0;
+}
+
+.main-title {
+  /* заголовок h1 */
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  color: var(--hero-text-color);
+  width: 496px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-modal-btn {
+  display: block;
+  padding: 16px 32px;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--button-color);
+  /* после этого описываем текст внутри кнопки */
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--other-button-color-text);
+  transition: background var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func),
+    box-shadow var(--transition-duration-and-func);
+}
+
+.hero-modal-btn:hover,
+.hero-modal-btn:focus {
+  background: var(--primary-accent-color);
+  border-color: var(--primary-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.feature {
+  align-items: baseline;
+  gap: 24px;
+}
+
+.feature-list {
+  width: 264px;
+}
+
+.feature-icon {
+  display: flex;
+  height: 112px;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primary-text-color);
+  margin-bottom: 8px;
+}
+
+.text-description {
+  color: var(--secondary-text-color);
+}
+
+.suptitle {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.what-are-we-doing-list {
+  gap: 24px;
+}
+
+.what-are-we-doing-list-img {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.section-our-team {
+  background-color: var(--secondary-background-color);
+}
+
+.team-list {
+  align-items: baseline;
+  gap: 24px;
+}
+
+.team-list-card {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.card-suptitle {
+  word-break: break-all;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: var(--other-background-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card-suptitle-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.card-job-title {
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 8px;
+}
+
+.social-list {
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--icon-background-color);
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--icon-accent-background-color);
+}
+
+.social-list-icon {
+  fill: var(--icon-color);
+}
+
+.section-customers {
+  padding-top: 130px;
+}
+
+.customers-list {
+  gap: 24px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--icon-border-color);
+  border-radius: 4px;
+  fill: var(--icon-company-background-color);
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.client-icon {
+  transition: fill var(--transition-duration-and-func);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--icon-accent-company-background-color);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  /* це треба, щоб змінювати колір іконок при наведенні на посилання */
+  fill: var(--icon-accent-company-background-color);
+}
+
+.client {
+  flex-basis: calc((100% - 120px) / 6);
+}
+
+.section-projects {
+  padding-top: 96px;
+}
+
+.filter-list {
+  justify-content: center;
+  gap: 24px;
+}
+
+.filter-list-btn {
+  display: inline;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  background-color: var(--secondary-background-color);
+  border: 1px solid;
+  border-color: var(--border-color);
+  border-radius: 4px;
+  /* после этого описываем текст внутри кнопки */
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--button-color-text);
+  transition: background-color var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func),
+    box-shadow var(--transition-duration-and-func),
+    color var(--transition-duration-and-func);
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: var(--primary-accent-color);
+  border-color: var(--primary-accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  /* после этого описываем текст внутри кнопки */
+  color: var(--secondary-accent-color);
+}
+
+.project-card-list {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 72px;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.project-card {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.project-card-link {
+  display: block;
+  transition: box-shadow var(--transition-duration-and-func);
+}
+
+.project-card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transform: translate(0, 100%);
+  transition: transform var(--transition-duration-and-func);
+  background-color: var(--overlay-background-color);
+  color: var(--overlay-text-color);
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+}
+
+.project-card-link:hover .overlay,
+.project-card-link:focus .overlay {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translate(0, 0);
+}
+
+.project-card-link:hover,
+.project-card-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.project-subtitle {
+  border: 1px solid var(--border-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border-top: none;
+}
+
+/* ==========MAIN=END========== */
+
+/* ==========FOOTER========== */
+
+.footer {
+  background: var(--primary-background-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-text {
+  width: 264px;
+}
+
+.footer-logo {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--footer-primary-logo-color);
+}
+
+.footer-logo > span {
+  color: var(--footer-secondary-logo-color);
+}
+
+.footer-description {
+  color: var(--other-text-color);
+  margin-top: 16px;
+}
+
+.footer-social-media {
+  margin-left: 120px;
+}
+
+.footer-social-media-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--footer-text-color);
+  margin-bottom: 16px;
+}
+
+.footer-social-list {
+  gap: 16px;
+}
+
+.footer-social-list-link {
+  background-color: var(--footer-social-list-link-color);
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+  background-color: var(--footer-accent-social-list-link-color);
+}
+
+/* =FOOTER=FORM= */
+
+.footer-form {
+  margin-left: auto;
+}
+
+.footer-form-desc {
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--footer-text-color);
+}
+
+.footer-form-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--footer-form-input-border-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  padding: 8px 16px;
+  margin-right: 24px;
+  /* описуємо текст */
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--footer-text-color);
+}
+
+.footer-form-input:focus {
+  outline: none;
+}
+
+.footer-form-input::placeholder {
+  color: var(--placeholder-footer-text-color);
+}
+
+.footer-form-input-wrapper {
+  display: flex;
+}
+
+.footer-form-submit {
+  display: flex;
+  align-items: center;
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  background: var(--button-color);
+  border-radius: 4px;
+  border: var(--button-color);
+  transition: background var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func);
+  /* далі описуємо текст */
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-family: inherit;
+  color: var(--footer-text-color);
+}
+
+.footer-form-submit:hover,
+.footer-form-submit:focus {
+  background: var(--primary-accent-color);
+  border-color: var(--primary-accent-color);
+}
+
+.footer-form-submit-icon {
+  margin-left: auto;
+  fill: var(--footer-icon-color);
+}
+
+/* =FOOTER=FORM=END */
+
+/* ==========FOOTER=END========== */
+
+/* ==========MODAL=WINDOW========== */
+
+.backdrop {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-color);
+  transition: opacity var(--transition-duration-and-func),
+    visibility var(--transition-duration-and-func);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 408px;
+  /* height: 584px; */
+  background-color: var(--modal-window-background-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform var(--transition-duration-and-func);
+  padding: 72px 24px 24px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* потом размеры удалить!!!!!! */
+  width: 24px;
+  height: 24px;
+  background-color: var(--modal-button-background-color);
+  border: 1px solid var(--other-border-color);
+  border-radius: 50%;
+  padding: 0;
+  transition: border-color var(--transition-duration-and-func),
+    background-color var(--transition-duration-and-func);
+}
+
+.modal-close-btn-icon {
+  fill: var(--other-icon-color);
+  transition: fill var(--transition-duration-and-func);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  border-color: var(--icon-accent-background-color);
+  background-color: var(--icon-accent-background-color);
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: var(--modal-button-icon-accent-color);
+}
+
+/* ==========MODAL=WINDOW=END========== */
+/* ==========MODAL=FORM========== */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-field {
+  margin-bottom: 8px;
+}
+
+.modal-form-field-message {
+  margin-bottom: 16px;
+}
+
+.modal-form-desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--modal-form-desc-color);
+  margin-bottom: 16px;
+}
+
+.modal-form-input-desc {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-form-input-desc-color);
+  margin-bottom: 4px;
+}
+
+.modal-form-input-wrapper {
+  display: block;
+  position: relative;
+}
+
+.modal-form-input-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  transition: fill var(--transition-duration-and-func);
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--modal-form-border-color);
+  border-radius: 4px;
+  padding: 8px 38px;
+  /* описуємо текст */
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-form-input-text-color);
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.modal-form-message {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid var(--modal-form-border-color);
+  border-radius: 4px;
+  padding: 8px 16px;
+  /* описуємо текст */
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-form-input-text-color);
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.modal-form-message::placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-modal-form-border-color);
+}
+
+.modal-form-message:focus {
+  outline: none;
+  border-color: var(--accent-modal-form-border-color);
+}
+
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: var(--accent-icon-color);
+}
+
+.modal-form-submit {
+  display: block;
+  min-width: 169px;
+  padding: 16px 32px;
+  align-self: center;
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--button-color);
+  /* после этого описываем текст внутри кнопки */
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--other-button-color-text);
+  transition: background var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func),
+    box-shadow var(--transition-duration-and-func);
+}
+
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  background: var(--primary-accent-color);
+  border-color: var(--primary-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.privacy-policy-link {
+  color: var(--link-text-color);
+}
+
+/* ==========MODAL=FORM=END========== */
+
+/* ==========CHECKBOX========== */
+
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--checkbox-label-color);
+  margin-bottom: 24px;
+}
+
+.modal-form-check-desc::before {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--checkbox-border-color);
+  border-radius: 2px;
+  content: '';
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color var(--transition-duration-and-func),
+    background-image var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func);
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+  background-color: var(--accent-checkbox-color);
+  border-color: var(--accent-checkbox-color);
+  background-image: url(../images/checkbox.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal-form-check:focus + .modal-form-check-desc::before {
+  outline: 1.25px solid var(--accent-icon-color);
+}
+
+/* ==========CHECKBOX=END========== */
