@@ -640,7 +640,7 @@ button {
   .mobile-menu-close-btn {
     position: absolute;
     top: 24px;
-    right: 16px;
+    right: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -706,8 +706,9 @@ button {
 
   .mobile-social-list {
     display: flex;
-    justify-content: center;
-    gap: 56px;
+    justify-content: space-between;
+
+    /* gap: 56px; */
   }
 
   .mobile-social-list-link {
@@ -731,8 +732,8 @@ button {
 
   .section-hero {
     padding-bottom: 112px;
-    width: 428px;
-    height: 432px;
+    width: 100%;
+    height: auto;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-mobile.jpg);
   }
@@ -740,7 +741,6 @@ button {
   .main-title {
     font-size: 36px;
     line-height: 1.11;
-    width: 320px;
     margin-bottom: 72px;
   }
 
@@ -770,6 +770,7 @@ button {
   }
 
   .customers-list {
+    justify-content: center;
     column-gap: 16px;
   }
 
@@ -787,7 +788,8 @@ button {
   }
 
   .footer-text {
-    width: 268px;
+    max-width: 100%;
+    word-break: normal;
     margin-left: auto;
     margin-right: auto;
   }
