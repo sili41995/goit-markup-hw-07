@@ -22,7 +22,7 @@
       <div class="container page-header-container">
         <nav class="nav">
           <a class="logo link" href="./index.html"><span>Web</span>Studio</a>
-          <ul class="list">
+          <ul class="menu list">
             <li class="menu-item">
               <a class="menu-link there-is link" href="./index.html">Studio</a>
             </li>
@@ -34,6 +34,11 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open js-open-menu" type="button">
+          <svg class="menu-open" width="32" height="22">
+            <use href="./images/icons.svg#menu-hamburger"></use>
+          </svg>
+        </button>
         <address class="adress">
           <ul class="list list-adress">
             <li class="contact-list">
@@ -48,6 +53,74 @@
             </li>
           </ul>
         </address>
+      </div>
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <div class="mobile-menu-container container">
+          <button class="mobile-menu-close-btn js-close-menu" type="button">
+            <svg class="mobile-menu-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#close-modal"></use>
+            </svg>
+          </button>
+          <nav class="mobile-nav">
+            <ul class="mobile-menu-list list">
+              <li class="mobile-menu-item">
+                <a class="menu-link link" href="./index.html">Studio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="menu-link link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="menu-link there-is link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mobile-adress">
+            <ul class="list mobile-list-adress">
+              <li class="mobile-contact-phone">
+                <a class="mobile-adress-contact link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-contact-mail">
+                <a
+                  class="mobile-adress-mail link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="mobile-social-list list">
+            <li>
+              <a class="mobile-social-list-link" href="">
+                <svg class="mobile-social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social-list-link" href="">
+                <svg class="mobile-social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social-list-link" href="">
+                <svg class="mobile-social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social-list-link" href="">
+                <svg class="mobile-social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -115,7 +188,8 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+
+      <section class="section-what-are-we-doing section">
         <div class="container">
           <h2 class="suptitle">What are we doing</h2>
           <ul class="what-are-we-doing-list list">
@@ -322,42 +396,42 @@
           <ul class="customers-list list">
             <li class="client">
               <a class="client-link" href="">
-                <svg class="client-icon" width="104" height="56">
+                <svg class="client-icon">
                   <use href="./images/icons.svg#ya-co"></use>
                 </svg>
               </a>
             </li>
             <li class="client">
               <a class="client-link" href="">
-                <svg class="client-icon" width="104" height="56">
+                <svg class="client-icon">
                   <use href="./images/icons.svg#company-tag-line-here"></use>
                 </svg>
               </a>
             </li>
             <li class="client">
               <a class="client-link" href="">
-                <svg class="client-icon" width="104" height="56">
+                <svg class="client-icon">
                   <use href="./images/icons.svg#company"></use>
                 </svg>
               </a>
             </li>
             <li class="client">
               <a class="client-link" href="">
-                <svg class="client-icon" width="104" height="56">
+                <svg class="client-icon">
                   <use href="./images/icons.svg#foster-peters"></use>
                 </svg>
               </a>
             </li>
             <li class="client">
               <a class="client-link" href="">
-                <svg class="client-icon" width="104" height="56">
+                <svg class="client-icon">
                   <use href="./images/icons.svg#brand"></use>
                 </svg>
               </a>
             </li>
             <li class="client">
               <a class="client-link" href="">
-                <svg class="client-icon" width="104" height="56">
+                <svg class="client-icon">
                   <use href="./images/icons.svg#company-tag-line"></use>
                 </svg>
               </a>
@@ -508,5 +582,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
