@@ -392,6 +392,7 @@ button {
   background: transparent;
   padding: 8px 16px;
   margin-right: 24px;
+  /* описуємо текст */
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
@@ -409,6 +410,7 @@ button {
   border: var(--button-color);
   transition: background var(--transition-duration-and-func),
     border-color var(--transition-duration-and-func);
+  /* далі описуємо текст */
   font-weight: 500;
   letter-spacing: 0.04em;
   font-family: inherit;
@@ -955,15 +957,15 @@ button {
     text-align: center;
   }
 
+  .footer-form-input {
+    width: 100%;
+    margin-right: 0;
+  }
+
   .footer-form-submit {
     margin-top: 16px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .footer-form-input {
-    width: 100%;
-    margin-right: 0;
   }
 
   .footer-social-media-text {
@@ -979,6 +981,10 @@ button {
   .footer-social-list-link {
     background-color: var(--footer-social-list-link-color);
     transition: background-color var(--transition-duration-and-func);
+  }
+
+  .footer-form-input {
+    width: 100%;
   }
 
   .modal {
