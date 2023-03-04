@@ -130,6 +130,140 @@ button {
   color: var(--header-secondary-logo-color);
 }
 
+.section-hero {
+  padding-bottom: 112px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-title {
+  text-align: center;
+  color: var(--hero-text-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-modal-btn {
+  display: block;
+  padding: 16px 32px;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--button-color);
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--other-button-color-text);
+  transition: background var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func),
+    box-shadow var(--transition-duration-and-func);
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.text-description {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.section-what-are-we-doing {
+  display: none;
+}
+
+.section-our-team {
+  background-color: var(--secondary-background-color);
+}
+
+.suptitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.card-suptitle {
+  word-break: break-all;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: var(--other-background-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card-suptitle-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.card-job-title {
+  font-weight: 400;
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 8px;
+}
+
+.team-list-card {
+  width: 264px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--icon-background-color);
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.social-list-icon {
+  fill: var(--icon-color);
+}
+
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 72px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88px;
+  border: 1px solid var(--icon-border-color);
+  border-radius: 4px;
+  fill: var(--icon-company-background-color);
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.footer {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .footer {
   background: var(--primary-background-color);
 }
@@ -161,6 +295,75 @@ button {
   line-height: 1.5;
   color: var(--footer-text-color);
   margin-bottom: 16px;
+}
+
+.footer-social-list-link {
+  background-color: var(--footer-social-list-link-color);
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.footer-form-desc {
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--footer-text-color);
+}
+
+.footer-form-input {
+  height: 40px;
+  border: 1px solid var(--footer-form-input-border-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  padding: 8px 16px;
+  margin-right: 24px;
+  /* описуємо текст */
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--footer-text-color);
+}
+
+.footer-form-submit {
+  display: flex;
+  align-items: center;
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  margin-top: 16px;
+  background: var(--button-color);
+  border-radius: 4px;
+  border: var(--button-color);
+  transition: background var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func);
+  /* далі описуємо текст */
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-family: inherit;
+  color: var(--footer-text-color);
+}
+
+.footer-form-submit {
+  display: flex;
+  align-items: center;
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  margin-top: 16px;
+  background: var(--button-color);
+  border-radius: 4px;
+  border: var(--button-color);
+  transition: background var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func);
+  /* далі описуємо текст */
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-family: inherit;
+  color: var(--footer-text-color);
+}
+
+.footer-form-submit-icon {
+  margin-left: auto;
+  fill: var(--footer-icon-color);
 }
 
 /* ==========MODAL=WINDOW========== */
@@ -413,166 +616,6 @@ button {
 }
 
 /* ==========CHECKBOX=END========== */
-
-.section-hero {
-  padding-bottom: 112px;
-  margin-left: auto;
-  margin-right: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.main-title {
-  text-align: center;
-  color: var(--hero-text-color);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-modal-btn {
-  display: block;
-  padding: 16px 32px;
-  margin-right: auto;
-  margin-left: auto;
-  background: var(--button-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: var(--button-color);
-  font-family: inherit;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--other-button-color-text);
-  transition: background var(--transition-duration-and-func),
-    border-color var(--transition-duration-and-func),
-    box-shadow var(--transition-duration-and-func);
-}
-
-.section {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
-.text-description {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-}
-
-.section-what-are-we-doing {
-  display: none;
-}
-
-.section-our-team {
-  background-color: var(--secondary-background-color);
-}
-
-.suptitle {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  margin-bottom: 72px;
-}
-
-.card-suptitle {
-  word-break: break-all;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  background: var(--other-background-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.card-suptitle-name {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.card-job-title {
-  font-weight: 400;
-  text-align: center;
-  color: var(--secondary-text-color);
-  margin-bottom: 8px;
-}
-
-.team-list-card {
-  width: 264px;
-}
-
-.social-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.social-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--icon-background-color);
-  transition: background-color var(--transition-duration-and-func);
-}
-
-.social-list-icon {
-  fill: var(--icon-color);
-}
-
-.customers-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 72px;
-}
-
-.client-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 88px;
-  border: 1px solid var(--icon-border-color);
-  border-radius: 4px;
-  fill: var(--icon-company-background-color);
-  transition: border-color var(--transition-duration-and-func);
-}
-
-.footer {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
-.footer-social-list-link {
-  background-color: var(--footer-social-list-link-color);
-  transition: background-color var(--transition-duration-and-func);
-}
-
-.footer-form-desc {
-  font-weight: 500;
-  margin-bottom: 16px;
-  color: var(--footer-text-color);
-}
-
-.footer-form-input {
-  height: 40px;
-  border: 1px solid var(--footer-form-input-border-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background: transparent;
-  padding: 8px 16px;
-  margin-right: 24px;
-  /* описуємо текст */
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  color: var(--footer-text-color);
-}
 
 @media screen and (min-width: 480px) {
   .container {
@@ -853,34 +896,19 @@ button {
     width: 100%;
   }
 
-  .footer-form-submit {
-    display: flex;
-    align-items: center;
-    width: 165px;
-    height: 40px;
-    padding: 8px 24px;
-    margin-top: 16px;
-    background: var(--button-color);
-    border-radius: 4px;
-    border: var(--button-color);
-    transition: background var(--transition-duration-and-func),
-      border-color var(--transition-duration-and-func);
-    /* далі описуємо текст */
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    font-family: inherit;
-    color: var(--footer-text-color);
-  }
-
-  .footer-form-submit-icon {
-    margin-left: auto;
-    fill: var(--footer-icon-color);
-  }
-
   .modal {
     padding: 72px 16px 24px;
     width: 100%;
     max-width: 392px;
+  }
+}
+
+@media screen and (min-deviceipixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .section-hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/background/people-office-mobile@2x.jpg);
   }
 }
 
@@ -1057,31 +1085,18 @@ button {
     width: 264px;
   }
 
-  .footer-form-submit {
-    display: flex;
-    align-items: center;
-    width: 165px;
-    height: 40px;
-    padding: 8px 24px;
-    background: var(--button-color);
-    border-radius: 4px;
-    border: var(--button-color);
-    transition: background var(--transition-duration-and-func),
-      border-color var(--transition-duration-and-func);
-    /* далі описуємо текст */
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    font-family: inherit;
-    color: var(--footer-text-color);
-  }
-
-  .footer-form-submit-icon {
-    margin-left: auto;
-    fill: var(--footer-icon-color);
-  }
-
   .modal {
+    width: 408px;
     padding: 72px 25px 24px 23px;
+  }
+}
+
+@media screen and (min-deviceipixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .section-hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/background/people-office-tablet@2x.jpg);
   }
 }
 
@@ -1273,5 +1288,14 @@ button {
 
   .modal {
     padding: 72px 24px 24px;
+  }
+}
+
+@media screen and (min-deviceipixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .section-hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/background/people-office-desktop@2x.jpg);
   }
 }
