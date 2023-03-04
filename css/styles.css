@@ -136,7 +136,7 @@ button {
   margin-right: auto;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .main-title {
@@ -784,11 +784,11 @@ button {
   }
 
   .section-hero {
-    padding-bottom: 112px;
-    max-width: 428px;
+    width: 428px;
     height: 432px;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-mobile.jpg);
+    background-size: 428px 432px;
   }
 
   .main-title {
@@ -907,8 +907,9 @@ button {
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .section-hero {
-    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/background/people-office-mobile@2x.jpg);
+    background: linear-gradientt(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/background/people-office-mobile@2x.jpgg);
+    background-size: 428px 432px;
   }
 }
 
@@ -998,6 +999,7 @@ button {
     height: 436px;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-tablet.jpg);
+    background-size: 768px 436px;
   }
 
   .main-title {
@@ -1097,6 +1099,7 @@ button {
   .section-hero {
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-tablet@2x.jpg);
+    background-size: 768px 436px;
   }
 }
 
@@ -1153,6 +1156,7 @@ button {
       url(../images/background/people-office-desktop.jpg);
     width: 1440px;
     height: 600px;
+    background-size: 1440px 600px;
   }
 
   .main-title {
@@ -1297,5 +1301,6 @@ button {
   .section-hero {
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-desktop@2x.jpg);
+    background-size: 1440px 600px;
   }
 }
