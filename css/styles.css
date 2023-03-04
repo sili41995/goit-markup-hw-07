@@ -136,7 +136,7 @@ button {
   margin-right: auto;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .main-title {
@@ -167,6 +167,8 @@ button {
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .text-description {
@@ -259,12 +261,86 @@ button {
   transition: border-color var(--transition-duration-and-func);
 }
 
-.footer {
-  padding-top: 96px;
-  padding-bottom: 96px;
+.filter-list-btn {
+  display: inline;
+}
+
+.filter-btn {
+  background-color: var(--secondary-background-color);
+  border: 1px solid;
+  border-color: var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--button-color-text);
+  transition: background-color var(--transition-duration-and-func),
+    border-color var(--transition-duration-and-func),
+    box-shadow var(--transition-duration-and-func),
+    color var(--transition-duration-and-func);
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: var(--primary-accent-color);
+  border-color: var(--primary-accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: var(--secondary-accent-color);
+}
+
+.project-card-link {
+  display: block;
+  transition: box-shadow var(--transition-duration-and-func);
+}
+
+.project-card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  display: none;
+}
+
+.project-card-link:hover .overlay,
+.project-card-link:focus .overlay {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translate(0, 0);
+}
+
+.project-card-link:hover,
+.project-card-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.project-subtitle {
+  border: 1px solid var(--border-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border-top: none;
+}
+
+.project-header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.project-text-description {
+  margin-top: 8px;
 }
 
 .footer {
+  padding-top: 96px;
+  padding-bottom: 96px;
   background: var(--primary-background-color);
 }
 
@@ -764,11 +840,11 @@ button {
   }
 
   .section-hero {
-    padding-bottom: 112px;
     max-width: 428px;
-    height: 432px;
+    height: auto;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-mobile.jpg);
+    background-size: 428px 432px;
   }
 
   .main-title {
@@ -834,84 +910,17 @@ button {
     row-gap: 16px;
   }
 
-  .filter-list-btn {
-    display: inline;
-  }
-
   .filter-btn {
     padding: 8px 16px;
-    background-color: var(--secondary-background-color);
-    border: 1px solid;
-    border-color: var(--border-color);
-    border-radius: 4px;
-    /* после этого описываем текст внутри кнопки */
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: var(--button-color-text);
-    transition: background-color var(--transition-duration-and-func),
-      border-color var(--transition-duration-and-func),
-      box-shadow var(--transition-duration-and-func),
-      color var(--transition-duration-and-func);
-  }
-
-  .filter-btn:hover,
-  .filter-btn:focus {
-    background-color: var(--primary-accent-color);
-    border-color: var(--primary-accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    color: var(--secondary-accent-color);
-  }
-
-  .project-card-list {
-    align-items: flex-start;
-    flex-wrap: wrap;
   }
 
   .project-card {
     margin-top: 48px;
   }
 
-  .project-card-link {
-    display: block;
-    transition: box-shadow var(--transition-duration-and-func);
-  }
-
   .project-card-img {
-    width: 396px;
-    height: 280px;
-  }
-
-  .project-card-img-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .overlay {
-    display: none;
-  }
-
-  .project-subtitle {
-    border: 1px solid var(--border-color);
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    border-top: none;
-  }
-
-  .project-header {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color);
-  }
-
-  .project-text-description {
-    margin-top: 8px;
+    max-width: 396px;
+    height: auto;
   }
 
   /* =======PORTFOLIO=END======== */
@@ -984,8 +993,9 @@ button {
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .section-hero {
-    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/background/people-office-mobile@2x.jpg);
+    background: linear-gradientt(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/background/people-office-mobile@2x.jpgg);
+    background-size: 428px 432px;
   }
 }
 
@@ -1075,6 +1085,7 @@ button {
     height: 436px;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-tablet.jpg);
+    background-size: 768px 436px;
   }
 
   .main-title {
@@ -1140,36 +1151,8 @@ button {
     gap: 24px;
   }
 
-  .filter-list-btn {
-    display: inline;
-  }
-
   .filter-btn {
     padding: 12px 24px;
-    background-color: var(--secondary-background-color);
-    border: 1px solid;
-    border-color: var(--border-color);
-    border-radius: 4px;
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: var(--button-color-text);
-    transition: background-color var(--transition-duration-and-func),
-      border-color var(--transition-duration-and-func),
-      box-shadow var(--transition-duration-and-func),
-      color var(--transition-duration-and-func);
-  }
-
-  .filter-btn:hover,
-  .filter-btn:focus {
-    background-color: var(--primary-accent-color);
-    border-color: var(--primary-accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    /* после этого описываем текст внутри кнопки */
-    color: var(--secondary-accent-color);
   }
 
   .project-card-list {
@@ -1181,60 +1164,13 @@ button {
     row-gap: 72px;
   }
 
-  .project-card-img {
-    width: 356px;
-    height: 300px;
-  }
-
   .project-card {
     flex-basis: calc((100% - 24px) / 2);
   }
 
-  .project-card-link {
-    display: block;
-    transition: box-shadow var(--transition-duration-and-func);
-  }
-
-  .project-card-img-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .overlay {
-    display: none;
-  }
-
-  .project-card-link:hover .overlay,
-  .project-card-link:focus .overlay {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transform: translate(0, 0);
-  }
-
-  .project-card-link:hover,
-  .project-card-link:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  }
-
-  .project-subtitle {
-    border: 1px solid var(--border-color);
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    border-top: none;
-  }
-
-  .project-header {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color);
-  }
-
-  .project-text-description {
-    margin-top: 8px;
+  .project-card-img {
+    width: 356px;
+    height: 300px;
   }
 
   /* ==========PORTFOLIO=END========== */
@@ -1286,6 +1222,7 @@ button {
   .section-hero {
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-tablet@2x.jpg);
+    background-size: 768px 436px;
   }
 }
 
@@ -1342,6 +1279,7 @@ button {
       url(../images/background/people-office-desktop.jpg);
     width: 1440px;
     height: 600px;
+    background-size: 1440px 600px;
   }
 
   .main-title {
@@ -1436,66 +1374,13 @@ button {
     padding-top: 96px;
   }
 
-  .filter-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-  }
-
-  .filter-list-btn {
-    display: inline;
-  }
-
-  .filter-btn {
-    padding: 12px 24px;
-    background-color: var(--secondary-background-color);
-    border: 1px solid;
-    border-color: var(--border-color);
-    border-radius: 4px;
-    /* после этого описываем текст внутри кнопки */
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: var(--button-color-text);
-    transition: background-color var(--transition-duration-and-func),
-      border-color var(--transition-duration-and-func),
-      box-shadow var(--transition-duration-and-func),
-      color var(--transition-duration-and-func);
-  }
-
-  .filter-btn:hover,
-  .filter-btn:focus {
-    background-color: var(--primary-accent-color);
-    border-color: var(--primary-accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    /* после этого описываем текст внутри кнопки */
-    color: var(--secondary-accent-color);
-  }
-
   .project-card-list {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
     margin-top: 72px;
-    column-gap: 24px;
     row-gap: 48px;
   }
 
   .project-card {
     flex-basis: calc((100% - 48px) / 3);
-  }
-
-  .project-card-link {
-    display: block;
-    transition: box-shadow var(--transition-duration-and-func);
-  }
-
-  .project-card-img-wrapper {
-    position: relative;
-    overflow: hidden;
   }
 
   .project-card-img {
@@ -1504,6 +1389,7 @@ button {
   }
 
   .overlay {
+    display: flex;
     position: absolute;
     left: 0;
     top: 0;
@@ -1530,26 +1416,6 @@ button {
   .project-card-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  }
-
-  .project-subtitle {
-    border: 1px solid var(--border-color);
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    border-top: none;
-  }
-
-  .project-header {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color);
-  }
-
-  .project-text-description {
-    margin-top: 8px;
   }
 
   /* ==========PORTFOLIO=END========== */
@@ -1608,5 +1474,6 @@ button {
   .section-hero {
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background/people-office-desktop@2x.jpg);
+    background-size: 1440px 600px;
   }
 }
