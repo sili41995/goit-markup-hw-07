@@ -189,7 +189,6 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
   background-color: var(--modal-window-background-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -205,7 +204,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* потом размеры удалить!!!!!! */
   width: 24px;
   height: 24px;
   background-color: var(--modal-button-background-color);
@@ -382,6 +380,10 @@ button {
   letter-spacing: 0.04em;
   color: var(--checkbox-label-color);
   margin-bottom: 24px;
+}
+
+.privacy-policy-wrapper {
+  flex-wrap: wrap;
 }
 
 .modal-form-check-desc::before {
@@ -582,6 +584,10 @@ button {
   .there-is {
     color: var(--primary-accent-color);
   }
+
+  .modal {
+    width: 392px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -629,7 +635,9 @@ button {
   }
 
   .mobile-menu-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
     padding-top: 80px;
     padding-bottom: 40px;
     padding-left: 40px;
@@ -675,9 +683,13 @@ button {
     display: none;
   }
 
+  .mobile-list-wrapper {
+    margin-top: auto;
+  }
+
   .mobile-adress {
     font-style: normal;
-    margin-top: 284px;
+    /* margin-top: 284px; */
   }
 
   .mobile-adress-contact {
@@ -707,8 +719,6 @@ button {
   .mobile-social-list {
     display: flex;
     justify-content: space-between;
-
-    /* gap: 56px; */
   }
 
   .mobile-social-list-link {
@@ -869,6 +879,8 @@ button {
 
   .modal {
     padding: 72px 16px 24px;
+    width: 100%;
+    max-width: 392px;
   }
 }
 

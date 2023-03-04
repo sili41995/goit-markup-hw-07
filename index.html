@@ -74,52 +74,54 @@
               </li>
             </ul>
           </nav>
-          <address class="mobile-adress">
-            <ul class="list mobile-list-adress">
-              <li class="mobile-contact-phone">
-                <a class="mobile-adress-contact link" href="tel:+110001111111"
-                  >+11 (000) 111-11-11</a
-                >
+          <div class="mobile-list-wrapper">
+            <address class="mobile-adress">
+              <ul class="list mobile-list-adress">
+                <li class="mobile-contact-phone">
+                  <a class="mobile-adress-contact link" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="mobile-contact-mail">
+                  <a
+                    class="mobile-adress-mail link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <ul class="mobile-social-list list">
+              <li>
+                <a class="mobile-social-list-link" href="">
+                  <svg class="mobile-social-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="mobile-contact-mail">
-                <a
-                  class="mobile-adress-mail link"
-                  href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li>
+                <a class="mobile-social-list-link" href="">
+                  <svg class="mobile-social-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="mobile-social-list-link" href="">
+                  <svg class="mobile-social-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="mobile-social-list-link" href="">
+                  <svg class="mobile-social-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-          <ul class="mobile-social-list list">
-            <li>
-              <a class="mobile-social-list-link" href="">
-                <svg class="mobile-social-list-icon" width="24" height="24">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="mobile-social-list-link" href="">
-                <svg class="mobile-social-list-icon" width="24" height="24">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="mobile-social-list-link" href="">
-                <svg class="mobile-social-list-icon" width="24" height="24">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="mobile-social-list-link" href="">
-                <svg class="mobile-social-list-icon" width="24" height="24">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -570,13 +572,15 @@
             name="user_policy"
             id="user-policy"
           />
-          <label class="modal-form-check-desc" for="user-policy"
-            >I accept the terms and conditions of the&nbsp;<a
-              class="privacy-policy-link"
-              href=""
-              >Privacy Policy</a
-            ></label
-          >
+          <label class="modal-form-check-desc" for="user-policy">
+            <di class="privacy-policy-wrapper">
+              I accept the terms and conditions of the&nbsp;<a
+                class="privacy-policy-link"
+                href=""
+                >Privacy Policy</a
+              >
+            </di>
+          </label>
           <button class="modal-form-submit" type="submit">Send</button>
         </form>
       </div>
