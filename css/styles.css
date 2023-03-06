@@ -1253,10 +1253,6 @@ button {
     padding-right: 16px;
   }
 
-  .header {
-    padding-bottom: 24px;
-  }
-
   .menu-link:hover,
   .menu-link:focus {
     color: var(--primary-accent-color);
