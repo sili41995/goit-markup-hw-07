@@ -564,6 +564,7 @@ button {
 }
 
 .modal-form-message {
+  display: block;
   resize: none;
   width: 100%;
   height: 120px;
